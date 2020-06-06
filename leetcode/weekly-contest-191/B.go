@@ -20,7 +20,7 @@ func maxArea(h int, w int, horizontalCuts []int, verticalCuts []int) int {
 	verticalCuts = append(verticalCuts, w)
 	maxW := verticalCuts[0]
 	for i := 1; i < len(verticalCuts); i++ {
-		if verticalCuts[i]-verticalCuts[i-1] > maxH {
+		if verticalCuts[i]-verticalCuts[i-1] > maxW {
 			maxW = verticalCuts[i] - verticalCuts[i-1]
 		}
 	}
